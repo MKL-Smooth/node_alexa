@@ -1,8 +1,10 @@
 var express = require('express')
     ,app = express()
+    ,http = require('http').Server(app); //do I need this?
+    ,io = require('socket.io')(http); //do I need this?
     ,last_value;
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function (req, res) {
   if(req.query.command == ""){
