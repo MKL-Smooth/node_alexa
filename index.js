@@ -8,10 +8,10 @@ app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function (req, res) {
 
-  sessionStorage.setItem("MyId", 123);
+  /*sessionStorage.setItem("MyId", 123);
   var value = sessionStorage.getItem("MyId");
   value = value + „4“;
-  .setItem („xyz“, value);
+  .setItem („xyz“, value);*/
 
   var text = "req: " + req;
   if(req.query.command == ""){
