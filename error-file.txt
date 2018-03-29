@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.js:538
     throw err;
     ^
@@ -8,3 +9,15 @@ Error: Cannot find module 'C:\Users\Markus\git\Stick\node_alexa\script'
     at Function.Module.runMain (module.js:676:10)
     at startup (bootstrap_node.js:187:16)
     at bootstrap_node.js:608:3
+=======
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module 'C:\Users\Markus\git\Stick\node_alexa\script'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+>>>>>>> df9ecba7d773176e188e59055278a0cb815eca7e
