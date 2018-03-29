@@ -14,6 +14,7 @@ app.get('/', function (req, res) {
   div.innerHTML = "<script>command: </script> + ";
   document.getElementById('posts').appendChild(div);*/
 
+  res.send("req: " + req);
   if(req.query.command == ""){
   res.send("{ \"command_leer\":\"" + last_value + "\"}");
   //res.send("Command " + req.query.command + ",Function " + function(req,res));
