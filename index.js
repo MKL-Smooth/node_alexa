@@ -8,9 +8,15 @@ app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function (req, res) {
   //console.log("Command: " + req.query.command + ", Function: " + function(req, res));
+
+  /*var div = document.createElement('div');
+  div.setAttribute('class', 'post block bc2');
+  div.innerHTML = "<script>command: </script> + ";
+  document.getElementById('posts').appendChild(div);*/
+
   if(req.query.command == ""){
-  res.send("{ \"command\":\"" + last_value + "\"}");
-  res.send("Command: " + req.query.command + ",Function: " + function(req,res));
+  res.send("{ \"command_leer\":\"" + last_value + "\"}");
+  //res.send("Command " + req.query.command + ",Function " + function(req,res));
   }else{
 	if(req.query.command == "empty"){
 		last_value = "";
