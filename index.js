@@ -7,7 +7,16 @@ var express = require('express')
 app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function (req, res) {
+  <!DOCTYPE html>
+  <html>
+  <body>
+  
+  <script>
   console.log("Command: " + req.query.command + ", Function: " + function(req, res));
+  </script>
+  
+  </body>
+  </html> 
   if(req.query.command == ""){
 	res.send("{ \"command\":\"" + last_value + "\"}");
   }else{
