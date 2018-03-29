@@ -7,17 +7,26 @@ var express = require('express')
 app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function (req, res) {
+  //console.log("Command: " + req.query.command + ", Function: " + function(req, res));
+
+  /*var div = document.createElement('div');
+  div.setAttribute('class', 'post block bc2');
+  div.innerHTML = "<script>command: </script> + ";
+  document.getElementById('posts').appendChild(div);*/
+
+  var text = "req: " + req;
   if(req.query.command == ""){
-	res.send("{ \"command\":\"" + last_value + "\"}");
+  text = text + "{ \"command_leer\":\"" + last_value + "\"}";
+  //res.send("Command " + req.query.command + ",Function " + function(req,res));
   }else{
 	if(req.query.command == "empty"){
 		last_value = "";
-		res.send("{}");
+		text = text + "{empty}"
 	}else{
-		res.send("{ \"command\":\"" + req.query.command + "\"}");
-		last_value = req.query.command;
+    last_value = req.query.command;
+    text = text + "{ \"command\":\"" + req.query.command + "\"}";
 	}
-  }
+  } res.send(text);
 })
 
 app.listen(app.get('port'), function () {
