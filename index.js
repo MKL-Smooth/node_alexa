@@ -7,8 +7,10 @@ var express = require('express')
 app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function (req, res) {
+  //console.log("Command: " + req.query.command + ", Function: " + function(req, res));
   if(req.query.command == ""){
-	res.send("{ \"command\":\"" + last_value + "\"}");
+  res.send("{ \"command\":\"" + last_value + "\"}");
+  res.send("Command: " + req.query.command + ",Function: " + function(req,res));
   }else{
 	if(req.query.command == "empty"){
 		last_value = "";
@@ -22,5 +24,4 @@ app.get('/', function (req, res) {
 
 app.listen(app.get('port'), function () {
   console.log('Node app is running on port', app.get('port'));
-  console.log("Command: " + req.query.command + ", Function: " + function(req, res));
 })
