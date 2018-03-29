@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
     last_value = req.query.command;
     text = text + "{ \"command\":\"" + req.query.command + "\"}";
 	}
-  } res.send(text + ", Value = " + value);
+  } res.send(text);
 })
 
 app.listen(app.get('port'), function () {
