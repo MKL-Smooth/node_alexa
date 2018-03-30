@@ -15,16 +15,15 @@ app.get('/', function (req, res) {
 
   var text = "req: " + req;
   if(req.query.command == ""){
-  text = text + "{ \"command_leer\":\"" + last_value + "\"}";
-  //res.send("Command " + req.query.command + ",Function " + function(req,res));
+    text = text + "{ \"command_leer\":\"" + last_value + "\"}";
   }else{
-	if(req.query.command == "empty"){
-		last_value = "";
-		text = text + "{empty}"
-	}else{
-    last_value = req.query.command;
-    text = text + "{ \"command\":\"" + req.query.command + "\"}";
-	}
+  	if(req.query.command == "empty"){
+  		last_value = "";
+  		text = text + "{}"
+  	}else{
+      last_value = req.query.command;
+      text = text + "{ \"command\":\"" + last_value + "\"}";
+  	}
   } res.send(text);
 })
 
