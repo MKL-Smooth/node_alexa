@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
   		text = "{}"
   	}else{
       last_value = req.query.command;
-      text = text + "{ \"new_command\":\"" + last_value + "\"}";
+      text = text + "{ \"new_command\": \"" + last_value + "\"}";
   	}
   } res.send(text);
 })
