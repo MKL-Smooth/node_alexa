@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
   value = value + „4“;
   .setItem („xyz“, value);*/
 
-  var text = "req: " + req;
+  var text = "req: " + req.query.command;
   if(req.query.command == ""){
     text = text + "{ \"command_leer\":\"" + last_value + "\"}";
   }else{
