@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
   var text = "req: " + req.query.command + " --> ";
   if(req.query.command == ""){
     //Bei Testen des Skills sehen wir immer den "command", da wir mit leerem command das gespeicherte abfragen
-    text = "{\"command\":\" " + last_value + "\"}";
+    text = "{\"command\": \"" + last_value + "\"}";
   }else{
   	if(req.query.command == "empty"){
   		last_value = "";
