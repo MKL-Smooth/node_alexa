@@ -13,16 +13,17 @@ app.get('/', function (req, res) {
   value = value + „4“;
   .setItem („xyz“, value);*/
 
-  var text = "req: " + req.query.command;
+  var text = "req: " + req.query.command + " --> ";
   if(req.query.command == ""){
-    text = text + "{ \"command_leer\":\"" + last_value + "\"}";
+    //Bei Testen des Skills sehen wir immer den saved_command, da wir mit leerem command das gespeicherte abfragen
+    text = text + "{\"saved_command\":\"" + last_value + "\"}";
   }else{
   	if(req.query.command == "empty"){
   		last_value = "";
   		text = text + "{}"
   	}else{
       last_value = req.query.command;
-      text = text + "{ \"command\":\"" + last_value + "\"}";
+      text = text + "{ \"new_command\":\"" + last_value + "\"}";
   	}
   } res.send(text);
 })
